@@ -1,8 +1,22 @@
-function sumAll(message, ...arr) {
-  console.log(message);
-  return arr.reduce((prev, next) => prev + next);
+const pizza = {
+  name: "Pepperoni",
+  toppings: ["pepperoni"]
+};
+
+function order({ name: pizzaName, toppings: pizzaToppings }) {
+  return { pizzaName, pizzaToppings };
 }
 
-const sum = sumAll("Hello!", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+const { pizzaName } = order(pizza);
 
-console.log(sum);
+const toppings = ["pepperoni", "bacon", "chilli"];
+
+const [first, second, third] = toppings;
+
+console.log(first, second, third);
+
+function logToppings([first, second, third]: any) {
+  console.log(first, second, third);
+}
+
+logToppings(toppings);
