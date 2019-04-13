@@ -1,9 +1,7 @@
-const coupon: string = "pizza25";
+let coupon: any;
 
-function normalizeCoupon(code: string): string {
-  return code.toUpperCase();
-}
+coupon = 25;
 
-const couponMessage: string = `Final coupon is ${normalizeCoupon(coupon)}`;
+coupon = "25";
 
-console.log(couponMessage);
+coupon = true;
