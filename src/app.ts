@@ -1,3 +1,23 @@
+class Sizes {
+  constructor(public sizes: string[]) {}
+
+  set availableSizes(sizes: string[]) {
+    this.sizes = sizes;
+  }
+
+  get availableSizes() {
+    return this.sizes;
+  }
+}
+
+const sizes = new Sizes(["small", "medium"]);
+// invoke getter
+console.log(sizes.availableSizes);
+// invoke setter
+sizes.availableSizes = ["medium", "large"];
+
+console.log(sizes.availableSizes);
+
 class Pizza {
   public toppings: string[] = [];
 
@@ -7,6 +27,8 @@ class Pizza {
     this.toppings.push(topping);
   }
 }
+
+// console.log(element.className);
 
 const pizza = new Pizza("Pepperoni");
 
